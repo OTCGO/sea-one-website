@@ -1,0 +1,74 @@
+<div class="wallet-token-all">
+  <div class="__list">
+    <div class="__row __hd">
+      <div class="__col __th">资产名称</div>
+      <div class="__col __th">总量</div>
+      <div class="__col __th">冻结量</div>
+      <div class="__col __th">可用量</div>
+      <div class="__col __th __action">操作</div>
+    </div>
+    <div class="__row __dt" [class.__current]="idx == 1" *ngFor="let asset of balance | async ">
+      <div class="__col __td __name">{{asset.name}}</div>
+      <div class="__col __td">{{asset.amount}}</div>
+      <div class="__col __td">0</div>
+      <div class="__col __td">{{asset.amount}}</div>
+      <div class="__col __td">
+        <el-button type="primary" (click)="openTranslate(asset.hash,asset.name,asset.amount)">转账</el-button>
+      </div>
+    </div>
+  </div>
+  <el-dialog [(visible)]="translateIng"   [close-on-click-modal]="false" [width]="'34%'">
+    <ng-template #title>
+      <h3 class="translate-title">{{seleteName}}转账</h3>
+    </ng-template>
+
+    <el-form [formGroup]="transalteForm" [show-message]="true" label-width=".6rem" >
+
+      <el-form-item label="数量" [required]="true" [status]="statusCtrl('amounts')" [error]="messageCtrl('amounts')" >
+        <el-input formControlName="amounts" [placeholder]="seleteAmounts" ></el-input>
+      </el-form-item>
+
+      <el-form-item label="地址" [required]="true" [status]="statusCtrl('address1')" [error]="messageCtrl('address1')">
+        <el-input formControlName="address1" ></el-input>
+      </el-form-item>
+
+      <el-form-item label="">
+        <el-input formControlName="address2"  [elDisabled]="true"></el-input>
+      </el-form-item>
+    </el-form>
+    <!-- <el-form label-width=".6rem" [show-message]="true">
+       <el-form-item label="资产类型" [required]="true">
+        <el-input placeholder="请选择资产类型">
+          <ng-template #append>
+            <div class="selected-assets-type" (click)="toggleTypeList=!toggleTypeList">
+              <div class="__foreground">
+                <i class="el-icon-arrow-down"></i>
+              </div>
+              <div class="type-list"  [ngClass]="{hide:!toggleTypeList}">
+                <div class="type-item">NEO</div>
+                <div class="type-item">NEO</div>
+                <div class="type-item">NEO</div>
+              </div>
+            </div>
+          </ng-template>
+        </el-input>
+      </el-form-item>
+      <p class="translate-tips">可用数量：0</p>
+      <el-form-item [required]="true">
+        <el-input aria-placeholder="转账数量" ></el-input>
+        <el-input aria-placeholder="转账地址"></el-input>
+         <el-input type="textarea" aria-placeholder="转账地址" [elDisabled]="true"></el-input>
+      </el-form-item>
+      <el-form-item [required]="true">
+        <el-input aria-placeholder="转账地址"></el-input>
+        <el-input type="textarea" aria-placeholder="转账地址" [elDisabled]="true" style="border:0" value="AZ2FJDreaBA9v4YzxsNPnkcvir1Jh3SdoG"></el-input>
+      </el-form-item>
+      <el-form-item [required]="true">
+        <el-input type="textarea" aria-placeholder="转账地址" [elDisabled]="true" style="border:0" value="AZ2FJDreaBA9v4YzxsNPnkcvir1Jh3SdoG"></el-input>
+      </el-form-item>
+    </el-form> -->
+    <ng-template #footer>
+        <el-button type="primary" (click)="btnTranslate()">确定</el-button>
+    </ng-template>
+  </el-dialog>
+</div>

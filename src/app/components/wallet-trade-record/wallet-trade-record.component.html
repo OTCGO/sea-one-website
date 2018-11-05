@@ -1,0 +1,20 @@
+<div class="wallet-trade-record">
+  <div class="__table">
+    <div class="__row">
+      <div class="__col __th __token">币种</div>
+      <div class="__col __th">总价</div>
+      <div class="__col __th">单价</div>
+      <div class="__col __th">数量</div>
+      <div class="__col __th">类型</div>
+      <div class="__col __th __action">撤销全部</div>
+    </div>
+    <div class="__row" *ngFor="let item of items;">
+      <div class="__col __td __token">{{item.tokenName}}</div>
+      <div class="__col __td __total">{{item.totalPrice}}/{{item.symbol}}</div>
+      <div class="__col __td">{{item.unitPrice}}</div>
+      <div class="__col __td">{{item.quantity}}</div>
+      <div class="__col __td">买入</div>
+      <div class="__col __td __action">{{item.actionName}}</div>
+    </div>
+  </div>
+</div>

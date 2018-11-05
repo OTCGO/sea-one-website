@@ -1,0 +1,57 @@
+<div class="account-security-mobile">
+  <div class="neo-form">
+      <h1>修改手机号</h1>
+      <div class="neo-form-group">
+        <label>国家</label>
+        <el-select model='cn' placeholder="请选择">
+          <el-option *ngFor="let item of [{value: 'cn',label: '中国' },
+            { value: 'us', label: '美国' }]"
+            [label]="item.label"
+            [value]="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div class="neo-form-group">
+        <label>短信验证类型</label>
+        <div class="neo-form-item">
+          <el-input placeholder="手机号码" >
+            <ng-template #prepend>
+              <span>+89</span>
+            </ng-template>
+          </el-input>
+        </div>
+        <div class="neo-form-item">
+          <el-input placeholder="接收到的验证码" >
+            <ng-template #append>
+              <span><i class="icon iconfont icon-duigou"></i></span>
+            </ng-template>
+          </el-input>
+        </div>
+      </div>
+      <h1>交易通知</h1>
+      <div class="neo-form-group">
+        <label>手机通知</label>
+        <div class="neo-form-item">
+          <el-select model='on' placeholder="请选择">
+            <el-option *ngFor="let item of [{value: 'on',label: '开(短信通知)' },
+              { value: 'off', label: '关(短信通知)' }]"
+              [label]="item.label"
+              [value]="item.value">
+            </el-option>
+          </el-select>
+        </div>
+      </div>
+      <div class="neo-form-group">
+        <label>短信验证(仅会员可用)</label>
+        <div class="neo-form-item">
+          <el-select model='30' placeholder="请选择">
+            <el-option *ngFor="let item of [{value: '30',label: '30分钟' },
+              { value: '40', label: '40分钟' }]"
+              [label]="item.label"
+              [value]="item.value">
+            </el-option>
+          </el-select>
+        </div>
+      </div>
+  </div>
+</div>

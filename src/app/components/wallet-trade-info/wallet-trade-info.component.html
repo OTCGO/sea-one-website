@@ -1,0 +1,17 @@
+<div class="wallet-trade-info">
+  <div class="__title">
+    交易详情
+  </div>
+  <div class="__list">
+    <div class="__item" *ngFor="let item of items; index as idx">
+      <span class="__category" *ngIf="item.category == 1">累计买入</span>
+      <span class="__category" *ngIf="item.category == 2">累计卖出</span>
+      <span class="__category" *ngIf="item.category == 3">在交易单</span>
+      <span class="__category" *ngIf="item.category == 4">累计转入</span>
+      <span class="__category" *ngIf="item.category == 5">累计转出</span>
+      <span class="__category" *ngIf="item.category == 6">冻结资产</span>
+      <span class="__amount">{{item.amount}}{{item.unit}}</span>
+      <i class="icon iconfont icon-arrow1-right"></i>
+    </div>
+  </div>
+</div>

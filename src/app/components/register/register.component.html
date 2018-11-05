@@ -1,0 +1,42 @@
+<div class="app-register">
+  <div class="register-content" *ngIf="!isSuccess">
+    <div class="register-title">
+      <img class="__logo" src="http://iph.href.lu/250x100?text=%E8%93%9D%E9%B2%B8%E6%B7%98" alt="">
+      <h4>欢迎使用OTCGO</h4>
+      <i class="el-icon-close close-register" (click)="closeMySelf()"></i>
+    </div>
+    <div class="registerForm">
+      <el-form [show-icon]="true" [formGroup]="registerForm" [show-message]="true">
+        <el-form-item [required]="true" [status]="statusCtrl('username')" [error]="messageCtrl('username')">
+          <el-input placeholder="账户名" formControlName="username"></el-input>
+        </el-form-item>
+        <el-form-item [status]="statusCtrl('wif')" [error]="messageCtrl('wif')">
+          <el-input placeholder="WiFi私钥（选填）" formControlName="wif"></el-input>
+        </el-form-item>
+        <el-form-item [required]="true" [status]="statusCtrl('pwd')" [error]="messageCtrl('pwd')">
+          <el-input native-type="password" placeholder="登录密码" formControlName="pwd"></el-input>
+        </el-form-item>
+        <el-form-item [required]="true" [status]="statusCtrl('repwd')" [error]="messageCtrl('repwd')">
+          <el-input native-type="password" placeholder="验证密码" formControlName="repwd"></el-input>
+        </el-form-item>
+        <el-form-item  [status]="statusCtrl('isRead')" [error]="messageCtrl('isRead')">
+            <el-checkbox label="isRead" formControlName="isRead">已阅读同意《蓝鲸淘用户协议与服务条款》</el-checkbox>
+        </el-form-item>
+        <el-form-item>
+          <el-button el-class="'register-btn'" type="primary" (click)="btnRegister()" >立即注册</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+
+  </div>
+  <div class="register-content" *ngIf="isSuccess">
+
+    <div class="register-title">
+      <h4>创建成功</h4>
+      <i class="el-icon-close close-register" (click)="closeMySelf()"></i>
+    </div>
+    <label for="">{{encrypted}}</label>
+    <el-button type="primary" (click)="btnDownload()">下载</el-button>
+    <p class="tips">钱包文件下载失败？请使用Chrome浏览器重新下载</p>
+  </div>
+</div>

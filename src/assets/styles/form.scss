@@ -1,0 +1,40 @@
+.neo-form{
+  width: 3rem;
+  h1{
+    font-size: 0.14rem;
+    font-weight: 400;
+  }
+  .neo-form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 0.05rem 0;
+    input{
+      font-size: 0.1rem;
+      height: 0.3rem;
+    }
+    .neo-form-item{
+      padding: 0.03rem 0;
+    }
+    .el-select{
+      width: 100%;
+
+      .el-icon-arrow-up:before{
+        border: 1px solid #ddd;
+        border-radius: 0.4rem;
+        padding: 0.02rem;
+      }
+      .el-input__suffix{
+        border-left: 1px solid #ddd;
+        padding: 0 0 0 0.05rem;
+      }
+    }
+    .el-input{
+      .el-input-group__prepend, .el-input-group__append{
+        background: #fff;
+      }
+      i{
+        color: #b4bccc;
+      }
+    }
+  }
+}

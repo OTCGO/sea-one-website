@@ -1,0 +1,22 @@
+.wallet-bonus-withdraw{
+  .__list{
+    padding: 0 0.4rem 0 0.1rem;
+    .__row{
+      display: flex;
+      height: 0.4rem;
+      // border: 1px solid #ddd;
+      .__col{
+        width: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .__row.__hd{
+      padding: 0.1rem 0 0.3rem 0;
+      .__col{
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.asset-nav{
+  background: #fff;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.05rem 0;
+
+  .__title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 0 0.5rem;
+
+    i{font-size: 0.2rem; font-weight: 100;}
+    h1{font-size: 0.13rem; font-weight: 300;}
+    span{color: #aaa;}
+  }
+
+  .__action{
+    padding: 0 0.5rem 0 0;
+
+    .el-button{transform: scale(0.9); display: inline-block;}
+    .__collect{color: #aaa;}
+    .__create{padding: 0.04rem 0.3rem; background: #348CD8;}
+  }
+}

@@ -1,0 +1,7 @@
+<div class="asset-menu">
+  <div class="__item"
+    *ngFor="let menu of menus; index as idx"
+    [class.__active] = 'idx == menuIdx'>
+    {{menu.name}}
+  </div>
+</div>

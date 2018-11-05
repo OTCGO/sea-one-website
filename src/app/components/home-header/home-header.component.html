@@ -1,0 +1,43 @@
+<div class="home-header">
+  <div class="logo">
+    <img src="http://iph.href.lu/250x100?text=%E8%93%9D%E9%B2%B8%E6%B7%98"/>
+  </div>
+  <div class="info">
+    <div class="timer">
+      <i class="icon iconfont icon-timer"></i>
+      <span>{{ (timer | async ) }}</span>
+    </div>
+    <div class="block">
+      <i class="icon iconfont icon-block"></i>
+      <span>{{ (block | async)?.height }}</span>
+    </div>
+    <a href="http://state.otcgo.cn" target="_blank" class="viewer">
+      <span>区块浏览</span>
+    </a>
+    <div (click)="isLogin=true" class="login">
+      <span>登录钱包</span>
+    </div>
+    <div (click)="isRegister=true" class="register">
+      <span>创建钱包</span>
+    </div>
+    <div (click)="this.isShowMenu = !this.isShowMenu" class="menu">
+      <span>菜单</span>
+    </div>
+    <!-- <div class="language">
+      <span>中文(chinese)<i class="icon iconfont icon-arrow-down"></i></span>
+    </div> -->
+  </div>
+</div>
+<app-login
+  *ngIf="isLogin"
+  (loginSuccess)="loginSuccess()"
+  (closeLogin)="closeLogin()"
+>
+
+</app-login>
+<app-register *ngIf="isRegister" (closeRegisterModal)="closeModal()">
+
+</app-register>
+<app-user-menu *ngIf="isShowMenu"
+               (closeMenu)="closeMenu()">
+</app-user-menu>

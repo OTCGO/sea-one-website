@@ -1,0 +1,16 @@
+<div class="wallet-bonus-withdraw">
+  <div class="__list">
+    <div class="__row __hd">
+      <div class="__col">资产名称/排序</div>
+      <div class="__col">总量/时间</div>
+      <div class="__col">待提取</div>
+      <div class="__col">已提取</div>
+    </div>
+    <div class="__row __info" *ngFor="let item of items; index as idx;">
+      <div class="__col">{{item.assetName}}</div>
+      <div class="__col">{{item.totalCount}}</div>
+      <div class="__col">{{item.canWithdraw}}</div>
+      <div class="__col">{{item.didWithdraw}}</div>
+    </div>
+  </div>
+</div>

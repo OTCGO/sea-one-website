@@ -1,0 +1,80 @@
+<div class="asset-record">
+  <div class="__mine">
+    <div class="__sidebar">
+      <div class="__title">
+        我的交易记录
+      </div>
+      <div class="__catelist">
+        <div class="__cateitem __current">统计</div>
+        <div class="__cateitem">详细</div>
+      </div>
+      <div class="__yearlist">
+        <div class="__yearitem">2017</div>
+        <div class="__yearitem">2016</div>
+        <div class="__yearitem">2015</div>
+      </div>
+    </div>
+    <div class="__record">
+      <div class="__item __header">
+        <div class="__col">买入量/KAC</div>
+        <div class="__col">卖出量/KAC</div>
+        <div class="__col">总花费/NEO</div>
+        <div class="__col">总收入/NEO</div>
+        <div class="__col">当前所持KAC</div>
+      </div>
+      <div class="__item" *ngFor="let record of myRecords; index as idx">
+        <div class="__col">{{record.buyin}}</div>
+        <div class="__col">{{record.soldout}}</div>
+        <div class="__col">{{record.cost}}</div>
+        <div class="__col">{{record.income}}</div>
+        <div class="__col">{{record.hold}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="__market">
+    <div class="__sidebar">
+      <div class="__title">
+        市场记录
+      </div>
+      <div class="__catelist">
+        <div class="__cateitem __current">所有</div>
+        <div class="__cateitem">卖出</div>
+        <div class="__cateitem">买入</div>
+      </div>
+    </div>
+    <div class="__record">
+      <div class="__item __header">
+        <div class="__col">所有</div>
+        <div class="__col">单价/NEO</div>
+        <div class="__col">数量/KAC</div>
+        <div class="__col">总价/NEO</div>
+        <div class="__col">日期</div>
+        <div class="__col">时间</div>
+        <div class="__col">交易类型</div>
+      </div>
+      <div class="__item" *ngFor="let record of marketRecords; index as idx">
+        <div class="__col">
+          <span *ngIf="record.actionType == 1">买入</span>
+          <span *ngIf="record.actionType == 2">卖出</span>
+        </div>
+        <div class="__col">{{record.unitPrice}}</div>
+        <div class="__col">{{record.quantity}}</div>
+        <div class="__col">{{record.totalPrice()}}</div>
+        <div class="__col">{{record.tradeDate}}</div>
+        <div class="__col">{{record.tradeTime}}</div>
+        <div class="__col">
+            <span *ngIf="record.tradeType == 1">正常交易</span>
+            <span *ngIf="record.actionType == 2">场外交易</span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="__paging">
+    <div class="__first">首页</div>
+    <div class="__prev">上一页</div>
+    <div class="__current">02</div>
+    <div class="__next">下一页</div>
+    <div class="__last">尾页</div>
+  </div>
+</div>

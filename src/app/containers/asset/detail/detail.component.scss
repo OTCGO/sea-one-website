@@ -1,0 +1,40 @@
+.page-asset-detail{
+  min-height: 100%;
+  padding: 0.2rem 0 0 0;
+  background-color: #3479da;
+  background-image: linear-gradient(135deg, #3479da 0%, #34b1d5 100%);
+
+  .container{
+    margin: 0.2rem 0 0 0;
+    display: flex;
+
+    .sidebar{
+      padding: 0 0 0 0.8rem;
+      flex: 2;
+      min-height: 100%;
+    }
+
+    .content{
+      flex: 18;
+
+      .trade{
+        display: flex;
+        flex-direction: row;
+        .trade-side{
+          width: 3rem;
+          .trade-own{
+            margin: 0.04rem 0 0 0;
+          }
+        }
+        .trade-sell, .trade-buy{
+          margin: 0 0 0 0.03rem;
+          width: 3.5rem;
+        }
+      }
+
+      .record{
+        width: 10rem;
+      }
+    }
+  }
+}

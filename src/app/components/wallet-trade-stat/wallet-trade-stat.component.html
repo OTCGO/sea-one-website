@@ -1,0 +1,107 @@
+<div class="wallet-trade-stat">
+  <div class="__lines">
+    <div class="__item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]">
+    </div>
+  </div>
+  <div class="__buyins">
+    <div class="__item">
+      <div class="__title">
+        <i class="icon iconfont icon-arrow1-left"></i>
+        <span>买入</span>
+        <i class="icon iconfont icon-arrow1-right"></i>
+      </div>
+      <div class="__price">
+        &euro; 2534.16
+      </div>
+    </div>
+    <div class="__item">
+      <div class="__title">
+        <i class="icon iconfont icon-arrow1-left"></i>
+        <span>KAC</span>
+        <i class="icon iconfont icon-arrow1-right"></i>
+      </div>
+      <div class="__subtitle">
+        买入
+      </div>
+    </div>
+  </div>
+  <div class="__days">
+    <div class="__percent">
+      <div class="__title">
+        七天内的交易占比
+      </div>
+      <div class="__items">
+        <div class="__item">
+          <div class="__circle">
+            <svg width="0.76rem" height="0.76rem">
+              <circle cx="0.38rem" cy="0.38rem" r="0.35rem" stroke-width="0.04rem" stroke="#3999D8" fill="none"></circle>
+              <circle cx="0.38rem" cy="0.38rem" r="0.35rem" stroke-width="0.04rem" stroke="#FFF" fill="none" transform="rotate(0,0,45)"
+                stroke-dasharray="130 220"></circle>
+            </svg>
+          </div>
+          <div class="__desc">
+            <div class="__pcount">
+              75
+              <i>%</i>
+            </div>
+            <div class="__ptitle">
+              561.15
+            </div>
+            <div class="__psubtitle">
+              /NEO
+            </div>
+          </div>
+          <span>总值</span>
+        </div>
+        <div class="__item">
+          <div class="__circle">
+            <svg width="0.76rem" height="0.76rem">
+              <circle cx="0.38rem" cy="0.38rem" r="0.35rem" stroke-width="0.04rem" stroke="#3999D8" fill="none"></circle>
+              <circle cx="0.38rem" cy="0.38rem" r="0.35rem" stroke-width="0.04rem" stroke="#FFF" fill="none" transform="rotate(0,0,45)"
+                stroke-dasharray="130 220"></circle>
+            </svg>
+          </div>
+          <div class="__desc">
+            <div class="__pcount">
+              75
+              <i>%</i>
+            </div>
+            <div class="__ptitle">
+              150000
+            </div>
+            <div class="__psubtitle">
+              /KAC
+            </div>
+          </div>
+          <span>数量</span>
+        </div>
+        <div class="__item">
+          <div class="__circle">
+            <svg width="0.76rem" height="0.76rem">
+              <circle cx="0.38rem" cy="0.38rem" r="0.35rem" stroke-width="0.04rem" stroke="#3999D8" fill="none"></circle>
+              <circle cx="0.38rem" cy="0.38rem" r="0.35rem" stroke-width="0.04rem" stroke="#FFF" fill="none" transform="rotate(0,0,45)"
+                stroke-dasharray="130 220"></circle>
+            </svg>
+          </div>
+          <div class="__desc">
+            <div class="__pcount">
+              75
+              <i>%</i>
+            </div>
+            <div class="__ptitle">
+              5次
+            </div>
+          </div>
+          <span>单次</span>
+        </div>
+      </div>
+    </div>
+    <div class="__daylist">
+      <div class="__item" *ngFor="let item of ['03','04','05','06','07','08','09']">
+        <div class="__dot"></div>
+        <span>{{item}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+

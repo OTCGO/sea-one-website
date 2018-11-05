@@ -1,0 +1,20 @@
+.wallet-title{
+  height: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+    font-weight: 400;
+    font-size: 0.13rem;
+  }
+  h2{
+    transform: scale(0.8);
+    color: #aaa;
+    margin: 0 0 0.15rem 0;
+  }
+  .__underline{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+}

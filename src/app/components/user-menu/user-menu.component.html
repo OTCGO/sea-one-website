@@ -1,0 +1,40 @@
+<div class="user-menu">
+  <div class="user-name">
+    Hi
+    <span (click)="close()" class="close">
+      <i class="el-icon-close"></i>
+    </span>
+  </div>
+  <div class="menu">
+    <!-- <ul class="">
+      <li class="">
+        <a routerLink="/wallet/token">资产总值</a>
+      </li>
+      <li class="">
+        <a routerLink="/wallet/bonus/total">提取分红</a>
+      </li>
+      <li class="">
+         <a routerLink="">我的账单</a>
+      </li>
+      <li class="">
+        <a routerLink="">交易记录</a>
+      </li>
+    </ul> -->
+    <ul class="">
+      <li class="">
+        <a routerLink="/wallet/token">我的钱包</a>
+      </li>
+      <li class="">
+        <a routerLink="/wallet/bonus/total">提取分红</a>
+      </li>
+      <li class="">
+        <a routerLink="/account">个人中心</a>
+      </li>
+      <li class="">
+        <a href="http://state.otcgo.cn/addrinfo.html?address={{address}}&network=mainnet" target="_blank">交易记录</a>
+      </li>
+    </ul>
+  </div>
+  <div class="logout">
+    注销登录</div>
+</div>

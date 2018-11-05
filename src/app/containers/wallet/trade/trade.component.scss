@@ -1,0 +1,27 @@
+.wallet-trade{
+  display: flex;
+  justify-content: center;
+  background: #dfdfdf;
+  min-height: 100%;
+  .container{
+    width: 8rem;
+    min-height: 100%;
+    background: #fff;
+    padding: 0.2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    .detail{
+      display: flex;
+      flex:1;
+      .info{
+        width: 2.5rem;
+        height: 100%;
+        background: #efefef;
+      }
+      .record{
+        flex: 1;
+        padding: 0.2rem;
+      }
+    }
+  }
+}

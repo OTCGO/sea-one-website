@@ -1,0 +1,27 @@
+<div class="asset-list">
+  <div class="__item" *ngFor="let asset of assets">
+    <div class="__title">
+      <div class="__name">
+          <span class="__code">{{asset.code}}</span>
+          <span class="__cname">({{asset.name}})</span>
+      </div>
+      <div class="__desc">
+        <span>{{asset.desc}}</span>
+      </div>
+    </div>
+    <div class="__info">
+      <div class="__gas">
+        <span><i>{{asset.gas}}</i>/gas</span>
+      </div>
+      <div class="__price">
+        <span>{{asset.price}}&yen;</span>
+      </div>
+      <div class="__market">
+        <span>&uarr;{{asset.marketIdx}}%</span>
+      </div>
+      <div class="__detail">
+          <el-button type="primary">主要按钮</el-button>
+      </div>
+    </div>
+  </div>
+</div>

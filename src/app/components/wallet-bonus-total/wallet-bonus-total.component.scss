@@ -1,0 +1,57 @@
+.wallet-bonus-total{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+
+  .__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.03rem solid #E57942;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    margin-left: 0.1rem;
+
+
+    .__total{
+      font-size: 0.3rem;
+      color: #E57942;
+      font-weight: 400;
+    }
+    .__last{
+      color: #E57942;
+      font-size: 0.1rem;
+      transform: scale(0.8)
+    }
+    .__block{
+      color: #aaa;
+      transform: scale(0.8);
+      margin: 0.25rem;
+    }
+    .__view{
+      a{
+        color: #E57942;
+        text-decoration: none;
+      }
+      cursor: pointer;
+    }
+  }
+
+  .__action{
+    margin: 0.1rem 0;
+    .el-button{
+      background: #E57942;
+      padding: 0.05rem 0.4rem;
+      border: 0;
+      box-shadow: 0 1px 6px #e57942;
+    }
+  }
+  .__support{
+    color: #aaa;
+    transform: scale(0.8);
+  }
+}

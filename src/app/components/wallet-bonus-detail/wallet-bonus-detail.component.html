@@ -1,0 +1,21 @@
+<div class="wallet-bonus-detail">
+  <div class="__title">
+    <h1>分红详情</h1>
+    <h2>待提取分红币种: 3</h2>
+  </div>
+  <div class="__list">
+    <div class="__item" *ngFor="let item of items; index as idx;">
+      <div class="__amount">{{item.assetAmount | number:'0.2-5'}}</div>
+      <div class="__symbol">/{{item.assetSymbol}}</div>
+      <div class="__name">{{item.assetName}}</div>
+      <div class="__total">总存量:{{item.assetTotal}}</div>
+      <div class="__persent">月分红率:{{item.bonusPersent}}%</div>
+      <div class="__canwithdraw">可提取量:{{item.bonusWithdrawable}}/{{item.assetSymbol}}</div>
+      <div class="__unwithdraw">不可提量:{{item.bonusUnwithdrawable}}/{{item.assetSymbol}}</div>
+      <div class="__lastest">最后提取时间:{{item.bonusLastWithdrawTime}}</div>
+      <div class="__action">
+          <el-button type="primary">提取分红</el-button>
+      </div>
+    </div>
+  </div>
+</div>

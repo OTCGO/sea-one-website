@@ -1,0 +1,47 @@
+<div class="wallet-bonus-total">
+  <div class="__info">
+    <div class="__total">
+      GAS 分红
+    </div>
+    <br />
+    <div class="__last">
+      待提取数量: {{ gasBonus.unavailable || 0}}
+    </div>
+    <br />
+    <div class="__last">
+      可提取数量: {{ gasBonus.available || 0 }}
+    </div>
+    <br />
+    <!-- <div class="__view">
+      <a routerLink="/wallet/bonus/detail">历史纪录</a>
+    </div> -->
+    <div class="__action">
+      <el-button type="primary" (click)="extractGas()" [disabled]="(gasBonus.unavailable === '0') && (gasBonus.available === '0')">一键提取</el-button>
+    </div>
+  </div>
+
+  <div class="__info">
+    <div class="__total">
+      ONG 分红
+    </div>
+    <br />
+    <div class="__last">
+      待提取数量: {{ ongBonus.unavailable || 0}}
+    </div>
+    <br />
+    <div class="__last">
+      可提取数量: {{ ongBonus.available || 0 }}
+    </div>
+    <br />
+    <!-- <div class="__view">
+        <a routerLink="/wallet/bonus/detail">历史纪录</a>
+      </div> -->
+    <div class="__action">
+      <el-button type="primary" (click)="extractOng()" [disabled]="((ongBonus.unavailable) === '0' && (ongBonus.available) === '0') || btnDisable">一键提取</el-button>
+    </div>
+  </div>
+
+  <!-- <div class="__support">
+    离线钱包由小蚁区块链提供技术支持
+  </div> -->
+</div>

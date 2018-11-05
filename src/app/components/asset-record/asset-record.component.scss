@@ -1,0 +1,151 @@
+.asset-record{
+  background: #fff;
+  padding: 0.2rem 0.4rem;
+  color: #aaa;
+  border: 1px solid #ddd;
+  border-radius: 0.05rem;
+  .__mine{
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 0.2rem 0;
+
+    .__sidebar{
+      width: 1.5rem;
+
+      .__title{
+        font-weight:400;
+        margin: 0.08rem 0 0.2rem 0;
+      }
+
+      .__catelist{
+        height: 0.4rem;
+        position: relative;
+        width: 1rem;
+        margin: 0 0 0 0.1rem;
+
+        .__cateitem{
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+        .__current{
+          position: absolute;
+          left: 0.74rem;
+          top: 0;
+          color: #000;
+          font-weight: 400;
+        }
+      }
+
+      .__yearlist{
+        border-top: 1px solid #ddd;
+        width: 1rem;
+        margin:  -0.2rem 0 0 0.1rem;
+        .__yearitem{
+          text-align: right;
+          padding: 0.08rem 0;
+        }
+      }
+    }
+
+    .__record{
+      .__item {
+        display: flex;
+        height: 0.35rem;
+
+        .__col{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1.5rem;
+          color: #000;
+          font-weight: 400;
+        }
+      }
+      .__header{
+        margin: 0 0 0.28rem 0;
+        .__col{
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  .__market{
+    display: flex;
+    padding: 0.2rem 0 0.2rem 0;
+
+    .__sidebar{
+      width: 1.5rem;
+
+      .__title{
+        font-weight:400;
+        margin: 0 0 0.2rem 0;
+      }
+
+      .__catelist{
+        height: 0.4rem;
+        position: relative;
+        width: 1rem;
+        margin: 0 0 0 0.1rem;
+
+        .__cateitem{
+          height: 0.25rem;
+        }
+
+        .__current{
+          color: #000;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .__record{
+      .__item {
+        display: flex;
+        height: 0.25rem;
+
+        .__col{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1.05rem;
+          color: #aaa;
+        }
+      }
+      .__header{
+        .__col{
+          font-weight: 400;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .__paging{
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem 0 0 0;
+    color: #000;
+    div{
+      text-align: center;
+      width: 0.4rem;
+      cursor: pointer;
+    }
+    .__current{
+      cursor: default;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #348CD8;
+      border-radius: 0.5rem;
+      height: 0.21rem;
+      width: 0.21rem;
+      margin: 0 0.1rem;
+      position: relative;
+      top: -0.02rem;
+    }
+  }
+}

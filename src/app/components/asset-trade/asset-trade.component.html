@@ -1,0 +1,39 @@
+<div class="asset-trade">
+  <div class="__info">
+    <div class="__price">
+      <span>买一价:</span>
+      <span class="__highlight"> 0.0019/NEO</span>
+    </div>
+    <div class="__action">
+      <el-button [plain]="true" type="success">卖出</el-button>
+    </div>
+  </div>
+  <div class="__list">
+    <div class="__item __header">
+      <div class="__col">排序</div>
+      <div class="__col">单价/NEO <i class="icon iconfont icon-arrow-down"></i></div>
+      <div class="__col">数量 <i class="icon iconfont icon-arrow-down"></i></div>
+      <div class="__col">总价 <i class="icon iconfont icon-arrow-down"></i></div>
+    </div>
+    <div class="__item"
+      [class.__last]="idx == records.length - 1"
+      *ngFor="let record of records; index as idx">
+      <div class="__col">买{{record.seqno}}</div>
+      <div class="__col">{{record.price}}</div>
+      <div class="__col">{{record.count}}</div>
+      <div class="__col">{{record.price*record.count}}</div>
+    </div>
+  </div>
+  <div class="__pager">
+    <div class="__prev">
+      <i class="icon iconfont icon-double-arrow-left"></i>
+    </div>
+    <div class="__indicator">
+      <span class="__current">01</span>
+      <span class="__total">/22</span>
+    </div>
+    <div class="__next">
+      <i class="icon iconfont icon-double-arrow-right"></i>
+    </div>
+  </div>
+</div>

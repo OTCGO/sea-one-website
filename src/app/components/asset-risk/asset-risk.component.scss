@@ -1,0 +1,28 @@
+.asset-risk{
+  background: #fff;
+  padding: 0.13rem;
+
+  .__title{
+    color: #F38C59;
+    font-weight: 300;
+    font-size: 0.13rem;
+    text-align: center;
+    padding: 0 0 0.1rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .__content{
+    padding: 0.15rem 0;
+    p{
+      transform: scale(0.85);
+      font-size: 0.1rem;
+      color: #aaa;
+    }
+    p.__highlight{
+      color: #3588D1;
+    }
+  }
+  .__agree{
+    text-align: center;
+  }
+}

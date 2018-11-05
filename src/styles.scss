@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~element-angular/theme/index.css";
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  font-weight: 100;
+  font-size: 0.1rem;
+}
+span, i, div{
+  font-weight: 100;
+  font-size: 0.1rem;
+}
+html,body{
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+i{
+  font-style: normal;
+}
+body, p{font-size: 0.15rem; margin: 0;}
+
+// ----------------------- Element -----------------------
+.el-button {
+  font-size: 0.1rem;
+  padding: 0.08rem 0.16rem;
+  border-radius: 0;
+  font-weight: 100;
+}

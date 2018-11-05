@@ -1,0 +1,131 @@
+.wallet-asset-total {
+  width: 100%;
+  height: 4.5rem;
+  position: relative;
+
+  .__info, .__convert {
+    position: absolute;
+
+  }
+
+  .__convert {
+    border-top: 1px solid #efefef;
+    padding: 0.1rem 0.4rem 0 0.42rem;
+    .__wrapper {
+      position: relative;
+      .__dot {
+        width: 0.08rem;
+        height: 0.08rem;
+        border-radius: 0.08rem;
+        background: #348CD8;
+        position: absolute;
+        left: -0.25rem;
+        top: 0.04rem;
+      }
+      .__title {
+        span {
+          margin: 0 0 0 0.1rem;
+          color: #348CD8;
+          font-weight: 300;
+        }
+      }
+      .__subtitle {
+        color: #aaa;
+        transform: scale(0.9);
+        position: relative;
+        left: -0.08rem;
+      }
+    }
+  }
+
+  .__info {
+    .__persent {
+      font-size: 0.18rem;
+      color: #348CD8;
+      font-weight: 400;
+    }
+    .__title {
+      color: #348CD8;
+      font-weight: 300;
+    }
+    .__desc1, .__desc2 {
+      color: #aaa;
+      transform: scale(0.9);
+      position: relative;
+      left: -0.05rem;
+    }
+  }
+
+  .__lefttop {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .__leftbottom {
+    left: 1rem;
+    top: 3rem;
+  }
+
+  .__righttop {
+    right: 1rem;
+    top: 1.5rem;
+  }
+
+  .__rightbottom {
+    right: 0.4rem;
+    top: 3.5rem;
+  }
+
+  .__total {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+
+    .__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #348CD8;
+      .__count {
+        background: linear-gradient(to bottom, #2EA4F6, #348CD8);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      .__price {
+        position: relative;
+        top: -0.1rem;
+        font-weight: 400;
+      }
+      .__view {
+        font-weight: 400;
+        position: relative;
+        top: 0.2rem;
+        color: #348CD8;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .__circle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+  .hide{
+    display: none;
+  }
+}

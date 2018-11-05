@@ -1,0 +1,43 @@
+<div class="app-login">
+  <div class="content">
+    <div class="login-type-tabs-link">
+      <div class="tabs-item" [ngClass]="{active:loginType==='file'}" (click)="errorMsg ='';loginType='file'">钱包文件登录</div>
+      <div class="tabs-item" [ngClass]="{active:loginType==='nep2'}" (click)="errorMsg ='';loginType='nep2'">NEP2登录</div>
+    </div>
+    <div class="login-content">
+      <h4 class="login-title">登录离线钱包</h4>
+      <i class="el-icon-close close-login" (click)="closeLoginModal()"></i>
+
+      <el-form class="login-form" [ngClass]="{hide:loginType==='nep2'}" [formGroup]="flieForm" [show-message]="true">
+        
+        <el-form-item class="input-group" [status]="statusCtrl('file')" [error]="messageCtrl('file')">
+          <el-input native-type="file" formControlName="file" placeholder="选择钱包文件" (change)="onFileChange($event)"></el-input>
+        </el-form-item>
+
+        <el-form-item class="input-group" [status]="statusCtrl('pwd')" [error]="messageCtrl('pwd')">
+          <el-input native-type="password" formControlName="pwd" placeholder="请输入密码"></el-input>
+        </el-form-item>
+        <el-form-item class="input-group">
+          <el-button type="primary" (click)="fileLogin()" class="login-btn form-control">登录</el-button>
+        </el-form-item>
+      </el-form>
+
+      <el-form class="login-form nep2-form" [formGroup]="nep2Form" [ngClass]="{hide:loginType==='file'}" [show-message]="true">
+        <el-form-item class="input-group" [status]="statusCtrl('nep2')" [error]="messageCtrl('nep2')">
+          <el-input formControlName="nep2" placeholder="请输入nep2字符"></el-input>
+        </el-form-item>
+        <el-form-item class="input-group" [status]="statusCtrl('pwd')" [error]="messageCtrl('pwd')">
+          <el-input native-type="password" formControlName="pwd" placeholder="请输入密码"></el-input>
+        </el-form-item>
+        <el-form-item class="input-group">
+          <el-button type="primary" (click)="nep2Login()" class="login-btn form-control">登录</el-button>
+        </el-form-item>
+      </el-form>
+      <p class="error">{{errorMsg}}</p>
+      <p class="no-account">
+        没有钱包？立即创建
+      </p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+.asset-own{
+  background: #fff;
+  padding: 0.13rem;
+
+  .__title{
+    font-size: 0.13rem;
+    padding: 0 0 0.1rem 0;
+    color: #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .__content{
+    padding: 0.2rem 0.4rem;
+
+    .__info{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .__tip{
+      color: #aaa;
+      transform: scale(0.8);
+      margin: 0.1rem 0;
+    }
+
+    .__action{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0.1rem 0 0 0;
+      width: 100%;
+      button{
+        width: 100%;
+        position: relative;
+        left: -0.1rem;
+        transform: scale(0.9);
+        margin: 0.02rem 0;
+      }
+    }
+  }
+}

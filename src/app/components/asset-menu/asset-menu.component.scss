@@ -1,0 +1,16 @@
+.asset-menu {
+  display: flex;
+  flex-direction: column;
+
+  .__item{
+    margin: 0.15rem 0 0 0;
+    color: #8EBDFD;
+    width: 0.8rem;
+  }
+  .__item.__active{
+    padding: 0 0.1rem 0.06rem 0;
+    color: #fff;
+    text-align: right;
+    border-bottom: 1px solid #fff;
+  }
+}

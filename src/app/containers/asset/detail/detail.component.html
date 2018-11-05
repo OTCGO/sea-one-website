@@ -1,0 +1,38 @@
+<div class="page-asset-detail">
+  <div class="header">
+    <app-asset-nav></app-asset-nav>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <app-asset-info></app-asset-info>
+      <br />
+      <br />
+      <app-asset-menu [menuIdx]="menuIdx" [menus]="menus"></app-asset-menu>
+    </div>
+    <div class="content">
+      <div class="trade" *ngIf="menuIdx == 1">
+          <div class="trade-side" >
+              <div class="trade-risk">
+                <app-asset-risk></app-asset-risk>
+              </div>
+              <div class="trade-own">
+                <app-asset-own></app-asset-own>
+              </div>
+          </div>
+          <div class="trade-sell">
+              <app-asset-trade></app-asset-trade>
+          </div>
+          <div class="trade-buy">
+              <app-asset-trade></app-asset-trade>
+          </div>
+      </div>
+
+      <div class="intro" *ngIf="menuIdx == 2">
+        <app-asset-intro></app-asset-intro>
+      </div>
+
+      <div class="record" *ngIf="menuIdx == 3">
+        <app-asset-record></app-asset-record>
+      </div>
+  </div>
+</div>

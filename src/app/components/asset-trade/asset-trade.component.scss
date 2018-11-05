@@ -1,0 +1,95 @@
+.asset-trade{
+  background: #fff;
+  width: 100%;
+
+  .__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.2rem 0.1rem 0.1rem 0;
+
+    .__price, .__action{
+      display: flex;
+      align-items: center;
+      height: 0.4rem;
+      flex:1;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .__price{
+      padding: 0 0 0 0.1rem;
+      position: relative;
+      left: 0.1rem;
+
+      span{
+        color: #aaa;
+      }
+      .__highlight{
+        margin: 0 0 0 0.1rem;
+        color: #5EA9ED;
+        font-size: 0.15rem;
+        font-weight: 400;
+      }
+    }
+    .__action{
+      justify-content: flex-end;
+
+      .el-button{
+        transform: scale(0.8);
+        color: #F7A77D;
+        border: 1px solid #F7A77D;
+        background: #fff;
+      }
+    }
+  }
+
+  .__list{
+    border-bottom: 2px solid #ddd;
+    .__item{
+      display: flex;
+      flex-direction: row;
+      height: 0.29rem;
+      border-bottom: 1px solid #ddd;
+      .__col{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.9);
+      }
+    }
+    .__header{
+      border-bottom: 2px solid #ddd;
+    }
+    .__last{
+      border: 0;
+    }
+  }
+
+  .__pager{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.612rem;
+
+    .__prev, .__next{
+      transform: scale(0.6);
+      color: #aaa;
+    }
+    .__indicator{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 0.3rem;
+
+      .__total{
+        display: block;
+        color: #aaa;
+        transform: scale(0.8);
+        position: relative;
+        top: -0.05rem;
+      }
+    }
+  }
+}
